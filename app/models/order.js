@@ -5,4 +5,10 @@ export default DS.Model.extend({
   deliveryInfo: DS.attr('string'),
   customerInfo: DS.attr('number'),
   items: DS.hasMany('order-item'),
+
+  total: Ember.computed('items.@each.quantity', function() {
+    return this.get('items').reduce((sum, orderItem) => {
+
+    }, 0);
+  }),
 });

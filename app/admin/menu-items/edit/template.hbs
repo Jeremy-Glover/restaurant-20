@@ -1,1 +1,11 @@
+{{#simple-form startingValues=model onsubmit=saveItem as |formValues|}}
+  {{mdl-textfield value=formValues.name name="name" label="Name"}}
+  {{mdl-textfield value=formValues.description name="description" label="Description "}}
+  {{mdl-textfield value=formValues.price name="price" label="Price"}}
+  {{mdl-textfield value=formValues.category name="category" label="Category"}}
+
+  <button class="submit-btn">Submit</button>
+{{/simple-form}}
+
+
 {{outlet}}
