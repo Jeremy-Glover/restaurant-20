@@ -16,6 +16,10 @@ Router.map(function() {
         path: '/:menu-item_id',
       });
     });
+
+    this.route('login', {
+      path: '/login',
+    });
   });
 
   this.route('menu', {
