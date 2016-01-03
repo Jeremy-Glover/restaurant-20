@@ -1,3 +1,4 @@
+<div class="new-item__form">
 {{#simple-form as |newItem|}}
   {{input class="new-item__name" value=newItem.name placeholder="Name"}}
   {{input class="new-item__description" value=newItem.description placeholder="Description"}}
@@ -5,5 +6,7 @@
   {{input class="new-item__category" value=newItem.category placeholder="Category"}}
 
 
-  <button class="new-item__submit">Submit</button>
+  {{mdl-button class="new-item__btn" isRaised=true text='Submit'}}
+
 {{/simple-form}}
+</div>
