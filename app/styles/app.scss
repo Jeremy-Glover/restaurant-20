@@ -1,1 +1,16 @@
 @import 'material-design-lite';
+
+html {
+  background: url(../images/manhattan.jpg) center;
+}
+
+.mdl-layout-title, .mdl-navigation__link {
+  font-size: 24px;
+  font-weight: 600;
+  color: #121312
+}
+
+.mdl-layout__header {
+  background: none;
+  border-bottom: 2px solid #0e0d0e;
+}

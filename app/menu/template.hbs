@@ -1,0 +1,13 @@
+<h2>Menu</h2>
+
+{{#group-categories items=model class="menu" tagName='ul' as |category|}}
+  <li>
+    <h3>{{category.name}}</h3>
+    <ul>
+      {{#each category.items as |menuItem|}}
+        {{menu-item-result menuItem=menuItem}}
+        {{mdl-button class="add-btn" isRaised=true text='Add To Cart'}}
+      {{/each}}
+    </ul>
+  </li>
+{{/group-categories}}

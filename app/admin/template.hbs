@@ -1,0 +1,14 @@
+<div class="admin">
+  <h3 class="admin-title">Admin Area</h3>
+{{#link-to 'admin.menu-items.new'}}
+  {{mdl-button class="admin-btn" isRaised=true text='New Item'}}
+{{/link-to}}
+{{#link-to 'admin.menu-items'}}
+  {{mdl-button class="admin-btn" isRaised=true text='Edit Menu'}}
+{{/link-to}}
+{{#link-to 'admin.orders.index'}}
+  {{mdl-button class="admin-btn" isRaised=true text='View Orders'}}
+{{/link-to}}
+</div>
+
+{{outlet}}

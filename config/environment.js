@@ -2,6 +2,19 @@
 
 module.exports = function(environment) {
   var ENV = {
+    //jscs: disable
+
+    apiHost: 'https://intense-thicket-6589.herokuapp.com',
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self'",
+      'font-src': "'self' http://fonts.gstatic.com",
+      'connect-src': "'self' https://intense-thicket-6589.herokuapp.com",
+      'img-src': "'self'",
+      'style-src': "'self' http://fonts.googleapis.com",
+      'media-src': "'self'"
+    },
+
     modulePrefix: 'restaurant-20',
     environment: environment,
     baseURL: '/',
@@ -18,10 +31,14 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
   };
 
   if (environment === 'development') {
+    ENV['ember-cli-mirage'] = {
+      enabled: false,
+    };
+
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
