@@ -6,6 +6,7 @@
     <ul>
       {{#each category.items as |menuItem|}}
         {{menu-item-result menuItem=menuItem}}
+        {{mdl-button class="add-btn" isRaised=true text='Add To Cart'}}
       {{/each}}
     </ul>
   </li>

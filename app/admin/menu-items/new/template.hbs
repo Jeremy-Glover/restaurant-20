@@ -1,12 +1,10 @@
 <div class="new-item__form">
-{{#simple-form as |newItem|}}
-  {{input class="new-item__name" value=newItem.name placeholder="Name"}}
-  {{input class="new-item__description" value=newItem.description placeholder="Description"}}
-  {{input class="new-item__price" value=newItem.price placeholder="Price"}}
-  {{input class="new-item__category" value=newItem.category placeholder="Category"}}
+{{#simple-form as |addItem|}}
+  {{input class="new-item__name" value=formValues.name name="name" placeholder="Name"}}
+  {{input class="new-item__description" value=formValues.description name="description" placeholder="Description"}}
+  {{input class="new-item__price" value=formValues.price name="price"placeholder="Price"}}
+  {{input class="new-item__category" value=formValues.category name="category" placeholder="Category"}}
 
-
-  {{mdl-button class="new-item__btn" isRaised=true text='Submit'}}
-
+  {{mdl-button class="add-item__btn" isRaised=true text='Submit'}}
 {{/simple-form}}
 </div>
